@@ -44,7 +44,6 @@ for imagePath in imagePaths:
     # extrai as classes dos rótulos
     label = imagePath.split(os.path.sep)[-2]
 
-
     if label == "3":
         label = 0
     elif label == "4":
@@ -73,7 +72,7 @@ aug = ImageDataGenerator(rotation_range=30, width_shift_range=0.1,
                          horizontal_flip=True, fill_mode="nearest")
 
 # Inicialização da arquiterura Letnet
-print("compiling model ...")
+print("compilando o  modelo ...")
 model = LeNet.build(width=64, heigth=64, depth=3, classes=4)
 opt = Adam(lr=INIT_LR, decay=INIT_LR / EPOCHS)
 # A função de perda utilizada é a categorical_crossentropy, pois estamos realizando

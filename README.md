@@ -1,30 +1,29 @@
-# Count People
+# Classifica BMW
 
-Conta o número de pessoas presentes na imagem
-
+ Este programa realiza o treinamento de 4 classes utilizando Deep learnig.
+Estas classes são 3 modelos de carros da BMW diferentes e uma classe indefinida,
+que contem vários elementos que são considerados indefinidos.
 
 ### Pré requisitos
-
 Este programa é escrito em Python e você precisará das seguintes bibliotecas
 para executar este código:
-
 ```
 opencv versão 4.0
 ```
-
 ```
 imutils
 ```
 
 ```
+keras
+```
+
+```
 scikit-learn
 ```
-e 
-
+e
 ```
 numpy
-```
-
 
 ### Instalando bibliotecas necessárias
 
@@ -50,7 +49,7 @@ e para instalar o numpy basta executar:
 pip install numpy
 ```
 
-É necessário também a instalação do keras, biblioteca para Deep Learning, abaixo segue um ótimo
+É necessário também a instalação do **keras**, biblioteca para Deep Learning, abaixo segue um ótimo
 tutorial para isto:
 
 ```
@@ -59,6 +58,6 @@ https://www.pyimagesearch.com/2016/11/14/installing-keras-with-tensorflow-backen
 
 ### Informações adicionais
 
-* Sitema operacional utilizado foi o ubuntu 16.04
+* Sistema operacional utilizado foi o ubuntu 16.04
 * As execuções foram feitas utilizando a CPU
-* IDE de desenvolvimento utilizada pycharm
+* IDE de desenvolvimento utilizada PyCharm
