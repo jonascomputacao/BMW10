@@ -9,14 +9,15 @@ import cv2
 
 
 # Carrega a imagem a ser classificada
-image = cv2.imread("test/manhattan.png")
+name = "alpine_class3"
+image = cv2.imread("test/"+name+".png")
 orig = image.copy()
 
 # Pré-processa a imagem para classificá-la
-image = cv2.resize(image, (32, 32))
+image = cv2.resize(image, (64, 64))
 image = image.astype("float") / 255.0 # normaliza os dados de 0 a 1
 image = img_to_array(image)
-image = np.expand_dims(image, axis=0) # *** adiciona uma dimensão extra
+image = np.expand_dims(image, axis=0) # adiciona uma dimensão extra para não dar problema em predict
 
 # Carrega o modelo de classificador treinado
 print("Carregando o modelo ...")
@@ -48,4 +49,5 @@ cv2.putText(output, label, (10, 25), cv2.FONT_HERSHEY_SIMPLEX,
 
 # Apresenta a imagem com o resultado
 cv2.imshow("Resultado: imagem classificada", output)
+cv2.imwrite("result/"+name+"_result.png",output)
 cv2.waitKey(0)
